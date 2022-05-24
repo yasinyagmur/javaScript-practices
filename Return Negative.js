@@ -11,10 +11,13 @@
 
 
 function makeNegative(num) {
-    if(Math.sign(num) == 1){
-      return num * (-1)
-      }else{
-        return num
-      }
-   }
+  if(Math.sign(num) == 1){
+    return num * (-1)
+    }else{
+      return num
+    }
+ }
 
+ function makeNegative(num) {
+  return num > 0 ? -num : num;
+}
