@@ -18,4 +18,3 @@ function makeNegative(num) {
       }
    }
 
-   makeNegative(-4)
