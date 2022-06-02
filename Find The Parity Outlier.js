@@ -8,7 +8,7 @@
 // Should return: 160 (the only even number)
 
 
-// Solution 1
+Solution 1
 let arr = [2, 4, 0, 100, 4, 11, 2602, 36];
 function findOutlier(integers) {
     let even = []
