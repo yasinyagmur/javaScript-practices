@@ -3,3 +3,12 @@
 // You are given an unsorted array containing all the integers from 0 to 100 inclusively. However, one number is missing. Write a function to find and return this number. What are the time and space complexities of your solution?
 
 
+function missingNo(nums) {
+        let sorted = nums.sort((a, b) => a - b);
+        for (let i = 0; i<sorted.length; i++){
+        if((sorted[i+1])-(sorted[i]) !==1){
+        return sorted[i]+1;
+        }
+    } ;
+}
+missingNo(nums)
