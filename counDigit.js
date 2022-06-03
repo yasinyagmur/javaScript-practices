@@ -12,3 +12,52 @@
 // Write a function that takes a 3 parameters: a digit, lower and upper bounds as integer. The function will calculate how many times the given digit occurs within the numbers including lower and upper bounds.
 // Please solve the problem for 0 <= digit < 10 and 0 < low < high, otherwise function should return -1.
 // If no occurrences is found in the given range, function should return 0.
+
+// //! soltion-1
+// function countDigits(digit, low, high) {
+//   if (0 <= digit && digit < 10 && 0 < low && low < high) {
+//     let numbers = [];
+//     for (let i = low; i <= high; i++) {
+//       numbers.push(i);
+//     }
+//     let count = 0;
+//     let wanted = numbers.join("").concat();
+//     for (let i = 0; i < wanted.length; i++) {
+//       if (digit === i) {
+//         count++;
+//       }
+//     }
+//     if (count > 0) {
+//       console.log(count);
+//     } else {
+//       return 0;
+//     }
+//   } else {
+//     return -1;
+//   }
+// }
+
+// countDigits(2, 5, 12);
+
+
+//!solution-2
+
+function countDigits(digit,low,high){
+    let counter= 0;
+    if (0 <= digit && digit < 10 && 0 < low && low < high) {
+        for (let i = low; i <= high; i++){
+            i.toString().split("").forEach((j) => {
+                if(digit == j){
+                   counter++;
+                };                
+            });
+        } return counter;
+    }else{
+        return -1;
+    }
+    
+};
+
+
+
+countDigits(2, 5, 12);
