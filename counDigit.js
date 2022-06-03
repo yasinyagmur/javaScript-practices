@@ -39,7 +39,6 @@
 
 // countDigits(2, 5, 12);
 
-
 //!solution-2
 
 function countDigits(digit,low,high){
