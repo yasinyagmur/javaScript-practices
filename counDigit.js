@@ -13,17 +13,19 @@
 // Please solve the problem for 0 <= digit < 10 and 0 < low < high, otherwise function should return -1.
 // If no occurrences is found in the given range, function should return 0.
 
-// //! soltion-1
 // function countDigits(digit, low, high) {
 //   if (0 <= digit && digit < 10 && 0 < low && low < high) {
 //     let numbers = [];
 //     for (let i = low; i <= high; i++) {
 //       numbers.push(i);
 //     }
+//     console.log(numbers);
+
+//     let wanted = numbers.join("");
+    
 //     let count = 0;
-//     let wanted = numbers.join("").concat();
-//     for (let i = 0; i < wanted.length; i++) {
-//       if (digit === i) {
+//     for (let j of wanted) {
+//       if (digit == j) {
 //         count++;
 //       }
 //     }
@@ -37,26 +39,26 @@
 //   }
 // }
 
-// countDigits(2, 5, 12);
+// countDigits(1, 10, 20);
 
 //!solution-2
 
-function countDigits(digit,low,high){
-    let counter= 0;
-    if (0 <= digit && digit < 10 && 0 < low && low < high) {
-        for (let i = low; i <= high; i++){
-            i.toString().split("").forEach((j) => {
-                if(digit == j){
-                   counter++;
-                };                
-            });
-        } return counter;
-    }else{
-        return -1;
+function countDigits(digit, low, high) {
+  let counter = 0;
+  if (0 <= digit && digit < 10 && 0 < low && low < high) {
+    for (let i = low; i <= high; i++) {
+      i.toString()
+        .split("")
+        .forEach((j) => {
+          if (digit == j) {
+            counter++;
+          }
+        });
     }
-    
-};
+    console.log(counter);
+  } else {
+    return -1;
+  }
+}
 
-
-
-countDigits(2, 5, 12);
+countDigits(1, 5, 12);
