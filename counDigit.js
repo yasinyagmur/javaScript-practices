@@ -15,51 +15,51 @@
 
 // //!solution-1
 
-function countDigits(digit, low, high) {
-  if (0 <= digit && digit < 10 && 0 < low && low < high) {
-    let numbers = [];
-    for (let i = low; i <= high; i++) {
-      numbers.push(i);
-    }
-    console.log(numbers);
-
-    let wanted = numbers.join("");
-    console.log(wanted);
-    let count = 0;
-    for (let j of wanted) {
-      if (digit == j) {
-        count++;
-      }
-    }
-    return count;
-  } else {
-    return -1;
-  }
-}
-
-countDigits(1, 30, 20);
-
-// //!solution-2
-
 // function countDigits(digit, low, high) {
-//   let counter = 0;
 //   if (0 <= digit && digit < 10 && 0 < low && low < high) {
+//     let numbers = [];
 //     for (let i = low; i <= high; i++) {
-//       i.toString()
-//         .split("")
-//         .forEach((j) => {
-//           if (digit == j) {
-//             counter++;
-//           }
-//         });
+//       numbers.push(i);
 //     }
-//     console.log(counter);
+//     console.log(numbers);
+
+//     let wanted = numbers.join("");
+//     console.log(wanted);
+//     let count = 0;
+//     for (let j of wanted) {
+//       if (digit == j) {
+//         count++;
+//       }
+//     }
+//     return count;
 //   } else {
 //     return -1;
 //   }
 // }
 
-// countDigits(1, 5, 12);
+// countDigits(1, 30, 20);
+
+// //!solution-2
+
+function countDigits(digit, low, high) {
+  let counter = 0;
+  if (0 <= digit && digit < 10 && 0 < low && low < high) {
+    for (let i = low; i <= high; i++) {
+      i.toString()
+        .split("")
+        .forEach((j) => {
+          if (digit == j) {
+            counter++;
+          }
+        });
+    }
+    console.log(counter);
+  } else {
+    return -1;
+  }
+}
+
+countDigits(1, 5, 12);
 
 
 
